@@ -1,0 +1,18 @@
+﻿@model WebApplication1.Departments.department
+<div style="padding-left: 10px">
+    @Model.name
+    </div>
+
+    @foreach (var element in Model.employees)
+{
+    <div style="padding-left: 10px">
+        @Html.Partial("_PartialEmployee", element)
+    </div>
+}
+
+    @foreach (var element in Model.departments)
+    {
+        <div style="padding-left: 50px">
+        @Html.Partial("_PartialDepartment", element)
+        </div>
+    }

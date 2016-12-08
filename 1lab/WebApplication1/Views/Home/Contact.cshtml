@@ -1,0 +1,15 @@
+﻿
+<form>
+    <input type="text" name="message" style="width:100px" />
+    <a href='javascript:test1();'>send</a>
+</form>
+
+<script type="text/javascript">
+    function test1() {
+        $.post("@Url.Action("Contact", "Home")", $("form").serialize())
+        .done(function (result) {
+            alert(result.message);
+        })
+    }
+
+</script>
